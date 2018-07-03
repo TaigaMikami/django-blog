@@ -47,7 +47,14 @@
 			{% endblock %}
 		</div>
 		<div class="col-md-4">
-			カテゴリー一覧
+			<ul class="list-group">
+			<li class="list-group-item bg-dark text-white">カテゴリー一覧</li>
+				{% for category in category_list %}
+					<li class="list-group-item">
+						<a href="{% url 'blog:category' category.pk %}">{{ category }}</a>
+					</li>
+				{% endfor %}
+			</ul>
 		</div>
 	</div>
 </div>

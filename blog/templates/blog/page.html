@@ -11,7 +11,7 @@
 		{%  for link_page in page_obj.paginator.page_range %}
 			{% if link_page == page_obj.number %}
 				<li class="page-item active">
-					<a href="?{% url_replace request 'page' link_page %}" class="page-lonk">
+					<a href="?{% url_replace request 'page' link_page %}" class="page-link">
 						{{ link_page }}
 					</a>
 				</li>
